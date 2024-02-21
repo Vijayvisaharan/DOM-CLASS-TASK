@@ -15,6 +15,19 @@ function input_create(tagname,attr1name,attr1value,attr2name,attr2value){
     element.setAttribute(attr2name,attr2value);
     return element;
 }
+function foo(){
+    let firstname=document.getElementById("firstname").value
+    console.log(`Firstname:${firstname}`)
+    let middlename=document.getElementById("middlename").value
+    console.log(`Middlename:${middlename}`)
+    let lastname=document.getElementById("lastname").value
+    console.log(`Lastname:${lastname}`)
+    let email=document.getElementById("email").value
+    console.log(`Email:${email}`)
+    let password=document.getElementById("password").value
+    console.log(`Password:${password}`)
+
+}
 
 var firstname=lable_create("lable","for"," firstname"," Firstname")
 var  firstname_break=break_create();
@@ -33,7 +46,13 @@ var email_input=input_create("input","type","email","id","email")
 var password=lable_create("lable","for","password","Password")
 var password_break=break_create();
 var password_input=input_create("input","type","epassword","id","password")
-document.body.append(firstname,firstname_break,firstname_input,break_create(),middlename,middlename_break,middlename_input,break_create(),lastname,lastname_break,lastname_input,break_create(),email,email_break,email_input,break_create(),password,password_break,password_input)
+
+var button = document.createElement("button");
+button.setAttribute("type","button");
+button.setAttribute("onclick","foo()");
+button.innerHTML="Submit";
+
+document.body.append(firstname,firstname_break,firstname_input,break_create(),middlename,middlename_break,middlename_input,break_create(),lastname,lastname_break,lastname_input,break_create(),email,email_break,email_input,break_create(),password,password_break,password_input,break_create(),button)
 
 
 
